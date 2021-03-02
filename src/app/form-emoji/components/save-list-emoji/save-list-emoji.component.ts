@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { ISaveStore } from '../../types/saveStore.interface';
+import { ISaveStore } from '../../interfaces/save-store.interface';
 
 @Component({
   selector: 'app-save-list-emoji',

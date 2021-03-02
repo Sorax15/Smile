@@ -24,7 +24,7 @@
                 *ngIf="showListEmoji">view_comfy
       </mat-icon>
 
-      <button mat-button class="button" (click)="saveStory()">Save</button>
+      <button mat-button class="button" [disabled]="this.form.invalid || isSendMessage" (click)="saveStory()">Save</button>
     </div>
 
   </form>
