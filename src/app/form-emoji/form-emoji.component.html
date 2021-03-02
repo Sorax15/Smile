@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <form [formGroup]="form" class="wrapper_form">
+
+    <div class="wrapper_form_title">
+      Your Diary
+      <mat-icon aria-hidden="false" aria-label="arrow right">arrow_right_alt</mat-icon>
+    </div>
+
+    <textarea formControlName="message" placeholder="Write something"></textarea>
+
+    <app-list-emoji
+      [showListEmoji]="showListEmoji"
+      [listEmoji]="listEmoji"
+      (addEmoji)="addEmoji($event)"
+    ></app-list-emoji>
+
+    <div class="wrapper_form_displaySmiles">
+      <mat-icon aria-hidden="false" aria-label="smiles"
+                (click)="changeShowList()"
+                *ngIf="!showListEmoji">tag_faces
+      </mat-icon>
+      <mat-icon class="openListSmiles" aria-hidden="false" aria-label="smiles"
+                (click)="changeShowList()"
+                *ngIf="showListEmoji">view_comfy
+      </mat-icon>
+
+      <button mat-button class="button" (click)="saveStory()">Save</button>
+    </div>
+
+  </form>
+
+  <app-save-list-emoji [saveStoreList]="saveStoreList"></app-save-list-emoji>
+
+</div>

@@ -1,0 +1,18 @@
+<div *ngIf="saveStoreList">
+
+  <div *ngFor="let item of saveStoreList" class="saveEmojiStory">
+    <div class="saveEmojiInfo">
+      <div class="data">
+        <mat-icon aria-hidden="false" aria-label="smiles">date_range</mat-icon>
+        {{ item.data }}
+      </div>
+      <div class="message">
+        {{ item.message }}
+      </div>
+    </div>
+    <div class="saveEmojiAction">
+      <mat-icon aria-hidden="false" aria-label="smiles">more_vert
+      </mat-icon>
+    </div>
+  </div>
+</div>
